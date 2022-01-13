@@ -4,10 +4,13 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Desafio - Grupo Voalle</title>
+        <title>Grupo Voalle</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="{{ asset('storage/images/favicon.png') }}" type="image/x-icon" />
 
         <!-- Styles -->
         <style>
