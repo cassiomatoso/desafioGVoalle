@@ -1,8 +1,11 @@
 /node_modules
 /public/hot
+<<<<<<< HEAD
+=======
+/storage/*.key
+>>>>>>> e7ad141791a56e47bd7e0cf31d14e93ab9d7f5bf
 /vendor
 .env
-.env.backup
 .phpunit.result.cache
 docker-compose.override.yml
 Homestead.json
