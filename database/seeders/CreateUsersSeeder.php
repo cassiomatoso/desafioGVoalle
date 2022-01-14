@@ -23,7 +23,7 @@ class CreateUsersSeeder extends Seeder
             ],
             [
                 'name'=>'Cliente',
-                'email'=>'cliente@gmail.com.br',
+                'email'=>'cliente@gmail.com',
                 'is_admin'=>'0',
                 'password'=>bcrypt('cliente@123')]
         ];
