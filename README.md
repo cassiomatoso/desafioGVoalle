@@ -1,3 +1,19 @@
+<p align="center"><a href="https://grupovoalle.com.br/" target="_blank"><img src="https://grupovoalle.com.br/wp-content/uploads/2021/04/cropped-marca-grupo-1.png" width="400"></a></p>
+
+
+## Passos para rodar o sistema
+
+- Verificar se o diretório "Vendor" está presente no projeto.
+- Verificar se o arquivo .env está com sua última versão *1.0.2.
+- Criar uma base de dados chamada "laravel".
+- Executar o comando: "php artisan migrate".
+- Após rodar as migrations, executar: "php artisan db:seed --class=CreateUsersSeeder".
+- E por fim, subir a aplicação com: "php artisan serve".
+<br/>
+<br/>
+<br/>
+___
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
