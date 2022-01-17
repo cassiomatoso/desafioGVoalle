@@ -3,12 +3,16 @@
 
 ## Passos para rodar o sistema
 
-- Verificar se o diretório "Vendor" está presente no projeto.
-- Verificar se o arquivo .env está com sua última versão *1.0.2.
-- Criar uma base de dados chamada "laravel".
-- Executar o comando: "php artisan migrate".
-- Após rodar as migrations, executar: "php artisan db:seed --class=CreateUsersSeeder".
-- E por fim, subir a aplicação com: "php artisan serve".
+- 1 - Verificar se o diretório "Vendor" está presente no projeto;
+- 2 - Verificar se o arquivo .env está com sua última versão *1.0.2;
+- 3 - Criar uma base de dados chamada "laravel";
+- 4 - Executar o comando: "php artisan migrate";
+- 5 - Após rodar as migrations, executar: "php artisan db:seed --class=CreateUsersSeeder";
+- 6 - PASSOS OPCIONAIS (até o 6.3), EXECUTE CASO QUEIRA ACESSAR UM SISTEMA PREVIAMENTE POPULADO
+- 6.1 - Executar: "php artisan db:seed --class=CreateProductsSeeder";
+- 6.2 - Executar: "php artisan db:seed --class=CreateCustomersSeeder";
+- 6.3 - Executar: "php artisan db:seed --class=CreatePurchasesSeeder";
+- 7 - E por fim, subir a aplicação com: "php artisan serve".
 <br/>
 <br/>
 <br/>
