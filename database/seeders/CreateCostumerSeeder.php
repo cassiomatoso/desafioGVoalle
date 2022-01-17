@@ -3,9 +3,9 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use App\Models\Costumer;
+use App\Models\Customer;
 
-class CreateCostumerSeeder extends Seeder
+class CreateCustomerSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,7 +14,7 @@ class CreateCostumerSeeder extends Seeder
      */
     public function run()
     {
-        $costumer = [
+        $customer = [
             [
                 'company'=>'Sulnet',
                 'email'=>'zilio@redesulnet.com.br',
@@ -36,8 +36,8 @@ class CreateCostumerSeeder extends Seeder
             
         ];
 
-        foreach ($costumer as $key => $value){
-            Costumer::create($value);
+        foreach ($customer as $key => $value){
+            Customer::create($value);
         }
     }
 }
