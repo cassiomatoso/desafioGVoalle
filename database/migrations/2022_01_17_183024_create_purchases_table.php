@@ -16,7 +16,6 @@ class CreatePurchasesTable extends Migration
         Schema::create('purchases', function (Blueprint $table) {
             $table->id();
             $table->float('amount');
-            $table->dateTime('created_at');
             $table->unsignedBigInteger('costumer_id');
             $table->unsignedBigInteger('product_id');
             $table->unsignedBigInteger('user_id');
