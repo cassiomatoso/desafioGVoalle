@@ -18,7 +18,6 @@ class CreateCustomersTable extends Migration
             $table->string('company');
             $table->email();
             $table->varchar('cnpj');
-            $table->varchar('cpf');
             $table->text('address');
             $table->timestamps();
         });
