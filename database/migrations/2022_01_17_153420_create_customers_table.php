@@ -17,7 +17,7 @@ class CreateCustomersTable extends Migration
             $table->id();
             $table->string('company');
             $table->string('email')->unique();
-            $table->varchar('cnpj');
+            $table->string('cnpj');
             $table->text('address')->nullable();
             $table->timestamps();
         });
