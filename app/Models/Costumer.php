@@ -15,7 +15,7 @@ class Costumer extends Model
      * @var array
      */
     protected $fillable = [
-        'company', 'email', 'cnpj', 'cpf', 'address'
+        'company', 'email', 'cnpj', 'address'
     ];
     
 }
