@@ -24,7 +24,7 @@ class CreatePurchasesSeeder extends Seeder
             [
                 'amount'=>'5000',
                 'user_id'=>'1',
-                'product_id'=>'1',
+                'product_id'=>'2',
                 'customer_id'=>'2'
             ],  
             [
