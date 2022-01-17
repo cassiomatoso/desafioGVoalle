@@ -18,6 +18,11 @@ class CreateProductsSeeder extends Seeder
             [
                 'title'=>'ERPVoalle',
                 'description'=>'Sistema de Gestão Empresarial Voalle',
+                'price'=>'10000',
+            ],
+            [
+                'title'=>'VoallePay',
+                'description'=>'Plataforma de pagamento para gestão de recebíveis. Simples, ágil e segura.',
                 'price'=>'5000',
             ]
         ];
