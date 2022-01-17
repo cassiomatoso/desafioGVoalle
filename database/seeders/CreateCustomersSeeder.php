@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use App\Models\Customer;
 
-class CreateCustomerSeeder extends Seeder
+class CreateCustomersSeeder extends Seeder
 {
     /**
      * Run the database seeds.
