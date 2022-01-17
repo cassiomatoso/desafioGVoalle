@@ -16,6 +16,7 @@ class CreateCustomersTable extends Migration
         Schema::create('customers', function (Blueprint $table) {
             $table->id();
             $table->string('company');
+            $table->email();
             $table->varchar('cnpj');
             $table->varchar('cpf');
             $table->text('address');
