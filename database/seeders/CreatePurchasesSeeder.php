@@ -16,7 +16,7 @@ class CreatePurchasesSeeder extends Seeder
     {
         $purchase = [
             [
-                'amount'=>'5000',
+                'amount'=>'10000',
                 'user_id'=>'1',
                 'product_id'=>'1',
                 'customer_id'=>'1'
@@ -28,7 +28,7 @@ class CreatePurchasesSeeder extends Seeder
                 'customer_id'=>'2'
             ],  
             [
-                'amount'=>'5000',
+                'amount'=>'10000',
                 'user_id'=>'1',
                 'product_id'=>'1',
                 'customer_id'=>'3'
