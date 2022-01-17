@@ -17,5 +17,10 @@ class Costumer extends Model
     protected $fillable = [
         'company', 'email', 'cnpj', 'address'
     ];
+
+    public function purchases()
+    {
+        return $this->hasMany(Purchase::class, 'costumer_id');
+    }
     
 }

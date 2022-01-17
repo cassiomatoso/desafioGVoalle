@@ -17,4 +17,9 @@ class Product extends Model
     protected $fillable = [
        'title', 'description', 'price'
     ];
+
+    public function purchases()
+    {
+        return $this->hasMany(Purchase::class, 'product_id');
+    }
 }
