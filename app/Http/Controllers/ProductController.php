@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ProductController extends Controller
 {
@@ -15,8 +16,9 @@ class ProductController extends Controller
     public function index()
     {
         //
-        $products = Product::oldest()->paginate(5);
-        return view('products.index', compact('products'))->with('i', (request()->input('page', 1) - 1) * 5);
+        return view('products.index', [
+            'products' => DB::table('products')->paginate(5)
+        ]);
     }
 
     /**

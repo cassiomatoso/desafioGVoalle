@@ -33,24 +33,27 @@
                                 <tbody>
                                     @foreach ($products as $product)
                                         <tr>
-                                            <td>{{ ++$i }}</td>
+                                            <td>{{ $product->id }}</td>
                                             <td>{{ $product->title }}</td>
                                             <td>{{ $product->description }}</td>
                                             <td>R$ {{ number_format($product->price, 2) }}</td>
                                             <td align="center">
-                                                <form action="{{ route('products.destroy', $product->id) }}" method="POST">
-                                                    <a class="btn btn-info btn-sm" href="{{ route('products.show', $product->id) }}" target="_blank">
+                                                <form action="{{ route('products.destroy', $product->id) }}"
+                                                    method="POST">
+                                                    <a class="btn btn-info btn-sm"
+                                                        href="{{ route('products.show', $product->id) }}" target="_blank">
                                                         <i class="fas fa-file-pdf"></i>
                                                     </a>
-                                                    <a class="btn btn-primary btn-sm" href="{{ route('products.edit', $product->id) }}">
+                                                    <a class="btn btn-primary btn-sm"
+                                                        href="{{ route('products.edit', $product->id) }}">
                                                         <i class="fas fa-edit"></i>
                                                     </a>
-                                                    
+
                                                     @csrf
                                                     @method('DELETE')
                                                     <button type="submit" class="btn btn-danger btn-sm">
                                                         <i class="fas fa-trash-alt"></i>
-                                                    </a>
+                                                        </a>
                                                 </form>
                                             </td>
                                         </tr>
@@ -58,7 +61,9 @@
                                 </tbody>
                             </table>
                         </div>
-
+                        <div class="row" align="center">
+                        {!! $products->links() !!}
+                        </div>
                     </div>
                 </div>
             </div>
