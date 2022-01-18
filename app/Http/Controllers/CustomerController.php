@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Customer;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class CustomerController extends Controller
 {
@@ -13,7 +15,10 @@ class CustomerController extends Controller
      */
     public function index()
     {
-        //
+        //Retorna todos os clientes, limitando a listagem a 5 registros
+        return view('customers.index', [
+            'customers' => DB::table('customers')->paginate(5)
+        ]);
     }
 
     /**
@@ -24,6 +29,7 @@ class CustomerController extends Controller
     public function create()
     {
         //
+        return view('customers.create');
     }
 
     /**
@@ -35,50 +41,72 @@ class CustomerController extends Controller
     public function store(Request $request)
     {
         //
+        $request->validate([
+            'company' => 'required',
+            'email' => 'required',
+            'cnpj' => 'required',
+            'address' => 'required'
+        ]);
+
+        Customer::create($request->all());
+        return redirect()->route('customers.index')->with('success', 'Cliente cadastrado.');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  object  $customer
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Customer $customer)
     {
         //
+        return view('customers.show', compact('customer'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  object  $customer
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Customer $customer)
     {
         //
+        return view('customer.edit', compact('customer'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  object  $customer
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Customer $customer)
     {
-        //
+        //        
+        $request->validate([
+            'company' => 'required',
+            'email' => 'required',
+            'cnpj' => 'required',
+            'address' => 'required'
+        ]);
+
+        $customer::update($request->all());
+        return redirect()->route('customers.index')->with('success', 'Cliente cadastrado.');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  object  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($customer)
     {
         //
+        $customer->delete();
+        return redirect()->route('customers.index')->with('success', 'Cliente deletado');
     }
 }
