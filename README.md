@@ -4,7 +4,7 @@
 ## Passos para rodar o sistema
 
 - 1 - Verificar se o diretório "Vendor" está presente no projeto;
-- 2 - Verificar se o arquivo .env está com sua última versão *1.0.2;
+- 2 - Verificar se o arquivo .env está com os atributos DB_DATABASE=laravel, DB_USERNAME, DB_PASSWORD preenchidos conforme as configs do seu local;
 - 3 - Criar uma base de dados chamada "laravel";
 - 4 - Executar o comando: "php artisan migrate";
 - 5 - Após rodar as migrations, executar: "php artisan db:seed --class=CreateUsersSeeder";
