@@ -61,8 +61,8 @@
                                 </tbody>
                             </table>
                         </div>
-                        <div class="row" align="center">
-                        {!! $products->links() !!}
+                        <div class="row text-center">
+                            {!! $products->links() !!}
                         </div>
                     </div>
                 </div>
