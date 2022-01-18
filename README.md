@@ -12,7 +12,8 @@
 - 6.1 - Executar: "php artisan db:seed --class=CreateProductsSeeder";
 - 6.2 - Executar: "php artisan db:seed --class=CreateCustomersSeeder";
 - 6.3 - Executar: "php artisan db:seed --class=CreatePurchasesSeeder";
-- 7 - E por fim, subir a aplicação com: "php artisan serve".
+- 7 - E por fim, subir a aplicação com: "php artisan serve";
+- Obs.: Usuário padrão carregado pelo Seeder: admin@grupovoalle.com.br | admin@123
 <br/>
 <br/>
 <br/>
