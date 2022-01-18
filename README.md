@@ -4,15 +4,16 @@
 ## Passos para rodar o sistema
 
 - 1 - Verificar se o diretório "Vendor" está presente no projeto;
-- 2 - Verificar se o arquivo .env está com os atributos DB_DATABASE=laravel, DB_USERNAME, DB_PASSWORD preenchidos conforme as configs do seu local;
-- 3 - Criar uma base de dados chamada "laravel";
-- 4 - Executar o comando: "php artisan migrate";
-- 5 - Após rodar as migrations, executar: "php artisan db:seed --class=CreateUsersSeeder";
-- 6 - PASSOS OPCIONAIS (até o 6.3), EXECUTE CASO QUEIRA ACESSAR UM SISTEMA PREVIAMENTE POPULADO
-- 6.1 - Executar: "php artisan db:seed --class=CreateProductsSeeder";
-- 6.2 - Executar: "php artisan db:seed --class=CreateCustomersSeeder";
-- 6.3 - Executar: "php artisan db:seed --class=CreatePurchasesSeeder";
-- 7 - E por fim, subir a aplicação com: "php artisan serve";
+- 2 - Abrir um terminal e rodar: "composer upgrade";
+- 3 - Verificar se o arquivo .env está com os atributos DB_DATABASE=laravel, DB_USERNAME, DB_PASSWORD preenchidos conforme as configs do seu local;
+- 4 - Criar uma base de dados chamada "laravel";
+- 5 - Executar o comando: "php artisan migrate";
+- 6 - Após rodar as migrations, executar: "php artisan db:seed --class=CreateUsersSeeder";
+- 7 - PASSOS OPCIONAIS (até o 6.3), EXECUTE CASO QUEIRA ACESSAR UM SISTEMA PREVIAMENTE POPULADO
+- 7.1 - Executar: "php artisan db:seed --class=CreateProductsSeeder";
+- 7.2 - Executar: "php artisan db:seed --class=CreateCustomersSeeder";
+- 7.3 - Executar: "php artisan db:seed --class=CreatePurchasesSeeder";
+- 8 - E por fim, subir a aplicação com: "php artisan serve";
 - Obs.: Usuário padrão carregado pelo Seeder: *admin@grupovoalle.com.br* | *admin@123*
 <br/>
 <br/>
