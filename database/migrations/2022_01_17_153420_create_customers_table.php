@@ -18,7 +18,12 @@ class CreateCustomersTable extends Migration
             $table->string('company');
             $table->string('email')->unique();
             $table->string('cnpj');
-            $table->text('address')->nullable();
+            $table->string('city')->nullable(); 
+            $table->string('uf')->nullable(); 
+            $table->string('district')->nullable(); 
+            $table->text('street')->nullable(); 
+            $table->smallInteger('nro')->nullable();
+            $table->text('complement')->nullable(); 
             $table->timestamps();
         });
     }
