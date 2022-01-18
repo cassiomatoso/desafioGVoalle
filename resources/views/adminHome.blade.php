@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-8">
+            <div class="col-md-10">
                 <div class="card">
                     <div class="card-header">{{ __('Olá, ' . Auth::user()->name . '!') }}
                     </div>
@@ -21,7 +21,8 @@
                                     <div class="card-body">
                                         <h5 class="card-title">Produtos</h5>
                                         <p class="card-text">Módulo para o gerenciamento dos produtos.</p>
-                                        <a href="#" class="btn btn-primary">Acessar</a>
+                                        <a href="{{ route('products.index') }}" class="btn btn-primary">Listar</a>
+                                        <a href="{{ route('products.create') }}" class="btn btn-primary">Criar</a>
                                     </div>
                                 </div>
                             </div>
