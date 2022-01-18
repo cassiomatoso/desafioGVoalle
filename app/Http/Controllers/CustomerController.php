@@ -93,8 +93,8 @@ class CustomerController extends Controller
             'address' => 'required'
         ]);
 
-        $customer::update($request->all());
-        return redirect()->route('customers.index')->with('success', 'Cliente cadastrado.');
+        $customer->update($request->all());
+        return redirect()->route('customers.index')->with('success', 'Cliente atualizado.');
     }
 
     /**
