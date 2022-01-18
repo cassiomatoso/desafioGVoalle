@@ -73,7 +73,7 @@ class CustomerController extends Controller
     public function edit(Customer $customer)
     {
         //
-        return view('customer.edit', compact('customer'));
+        return view('customers.edit', compact('customer'));
     }
 
     /**
