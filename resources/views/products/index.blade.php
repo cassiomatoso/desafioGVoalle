@@ -39,7 +39,7 @@
                                             <td>R$ {{ number_format($product->price, 2) }}</td>
                                             <td align="center">
                                                 <form action="{{ route('products.destroy', $product->id) }}" method="POST">
-                                                    <a class="btn btn-info btn-sm" href="{{ route('products.show', $product->id) }}">
+                                                    <a class="btn btn-info btn-sm" href="{{ route('products.show', $product->id) }}" target="_blank">
                                                         <i class="fas fa-file-pdf"></i>
                                                     </a>
                                                     <a class="btn btn-primary btn-sm" href="{{ route('products.edit', $product->id) }}">
