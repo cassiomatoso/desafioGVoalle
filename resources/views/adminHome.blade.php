@@ -22,7 +22,7 @@
                                         <h5 class="card-title">Produtos</h5>
                                         <p class="card-text">Módulo para o gerenciamento dos produtos.</p>
                                         <a href="{{ route('products.index') }}" class="btn btn-primary">Listar</a>
-                                        <a href="{{ route('products.create') }}" class="btn btn-primary">Criar</a>
+                                        <a href="{{ route('products.create') }}" class="btn btn-primary">Cadastrar</a>
                                     </div>
                                 </div>
                             </div>
@@ -31,7 +31,8 @@
                                     <div class="card-body">
                                         <h5 class="card-title">Clientes</h5>
                                         <p class="card-text">Módulo para o gerenciamento dos Clientes</p>
-                                        <a href="#" class="btn btn-primary">Acessar</a>
+                                        <a href="{{ route('customers.index') }}" class="btn btn-primary">Listar</a>
+                                        <a href="{{ route('customers.create') }}" class="btn btn-primary">Cadastrar</a>
                                     </div>
                                 </div>
                             </div>
