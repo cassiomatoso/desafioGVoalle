@@ -15,7 +15,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+        //Retorna todos os produtos, limitando a listagem a 5 registros
         return view('products.index', [
             'products' => DB::table('products')->paginate(5)
         ]);
