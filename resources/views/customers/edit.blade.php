@@ -31,13 +31,13 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <strong>Razão Social:</strong>
+                                        <strong>Razão Social:*</strong>
                                         <input type="text" name="company" value="{{ $customer->company }}" class="form-control" placeholder="Ex.: Grupo Voalle">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <strong>E-Mail principal:</strong>
+                                        <strong>E-Mail principal:*</strong>
                                         <input type="email" name="email" value="{{ $customer->email }}" class="form-control" placeholder="Ex.: razaosocial@dominio.com.br">
                                     </div>
                                 </div>
@@ -45,14 +45,48 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <strong>CNPJ:</strong>
+                                        <strong>CNPJ:*</strong>
                                         <input type="text" name="cnpj" value="{{ $customer->cnpj }}" class="form-control" placeholder="Ex.: 00.000.000/0001-00">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <strong>Endereço:</strong>
-                                        <input type="text" name="address" value="{{ $customer->address }}" class="form-control" placeholder="Ex.: BR-158, 204 – Bairro Urlândia | Santa Maria/RS">
+                                        <strong>UF:</strong>
+                                        <input type="text" name="uf" value="{{ $customer->uf }}" class="form-control" placeholder="Ex.: Rio Grande do Sul">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <strong>Cidade:</strong>
+                                        <input type="text" name="city" value="{{ $customer->city }}" class="form-control" placeholder="Ex.: Santa Maria">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <strong>Bairro:</strong>
+                                        <input type="text" name="district" value="{{ $customer->district }}" class="form-control" placeholder="Ex.: Centro">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <strong>Nro:</strong>
+                                        <input type="number" name="nro" value="{{ $customer->nro }}" class="form-control" placeholder="Ex.: 1234">
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="form-group">
+                                        <strong>Logradouro:</strong>
+                                        <input type="text" name="street" value="{{ $customer->street }}" class="form-control" placeholder="Ex.: BR-158">
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="form-group">
+                                        <strong>Complemento:</strong>
+                                        <input type="text" name="complement" value="{{ $customer->complement }}" class="form-control" placeholder="Ex.: Sala 01">
                                     </div>
                                 </div>
                             </div>

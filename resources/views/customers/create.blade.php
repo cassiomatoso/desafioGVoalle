@@ -30,13 +30,13 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <strong>Razão Social*:</strong>
+                                        <strong>Razão Social:*</strong>
                                         <input type="text" name="company" class="form-control" placeholder="Ex.: Grupo Voalle">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <strong>E-Mail principal*:</strong>
+                                        <strong>E-Mail principal:*</strong>
                                         <input type="email" name="email" class="form-control" placeholder="Ex.: razaosocial@dominio.com.br">
                                     </div>
                                 </div>
@@ -44,7 +44,7 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <strong>CNPJ*:</strong>
+                                        <strong>CNPJ:*</strong>
                                         <input type="text" name="cnpj" class="form-control" placeholder="Ex.: 00.000.000/0001-00">
                                     </div>
                                 </div>
