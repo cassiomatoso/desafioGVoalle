@@ -24,25 +24,54 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <strong>Razão Social:</strong>
+                                    <strong>Razão Social: </strong>
                                     {{ $customer->company }}
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <strong>E-Mail principal:</strong> {{ $customer->email }}
+                                    <strong>E-Mail principal: </strong> {{ $customer->email }}
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <strong>Endereço:</strong>{{ $customer->address }}
+                                    <strong>CNPJ: </strong>{{ $customer->cnpj }}
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <strong>CNPJ:</strong>{{ $customer->cnpj }}
+                                    <strong>UF: </strong>{{ $customer->uf }}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <strong>Cidade: </strong>{{ $customer->city }}
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <strong>Bairro: </strong>{{ $customer->district }}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <strong>Nro: </strong>{{ $customer->nro }}
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="form-group">
+                                    <strong>Logradouro: </strong>{{ $customer->street }}
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="form-group">
+                                    <strong>Complemento: </strong>{{ $customer->complement }}
                                 </div>
                             </div>
                         </div>
