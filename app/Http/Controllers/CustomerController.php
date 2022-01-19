@@ -44,8 +44,7 @@ class CustomerController extends Controller
         $request->validate([
             'company' => 'required',
             'email' => 'required',
-            'cnpj' => 'required',
-            'address' => 'required'
+            'cnpj' => 'required'
         ]);
 
         Customer::create($request->all());
@@ -89,8 +88,7 @@ class CustomerController extends Controller
         $request->validate([
             'company' => 'required',
             'email' => 'required',
-            'cnpj' => 'required',
-            'address' => 'required'
+            'cnpj' => 'required'
         ]);
 
         $customer->update($request->all());
