@@ -43,7 +43,7 @@
                                     <div class="card-body">
                                         <h5 class="card-title">Pedidos</h5>
                                         <p class="card-text">Controle dos pedidos.</p>
-                                        <a href="#" class="btn btn-primary">Acessar</a>
+                                        <a href="{{ route('purchases.index') }}" class="btn btn-primary">Acessar</a>
                                     </div>
                                 </div>
                             </div>
