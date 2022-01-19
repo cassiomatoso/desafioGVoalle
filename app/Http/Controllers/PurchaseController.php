@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
+use App\Models\Customer;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PurchaseController extends Controller
 {
@@ -13,7 +16,10 @@ class PurchaseController extends Controller
      */
     public function index()
     {
-        //
+        //Retorna todos os pedidos de vendas, limitando a listagem a 5 registros
+        return view('purchases.index', [
+            'purchases' => DB::table('purchases')->paginate(5)
+        ]);
     }
 
     /**
@@ -23,7 +29,11 @@ class PurchaseController extends Controller
      */
     public function create()
     {
-        //
+        //        
+        return view('purchases.create', [
+            'products' => Product::all(),
+            'customers' => Customer::all()
+        ]);
     }
 
     /**
