@@ -50,8 +50,42 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <strong>Endereço:</strong>
-                                        <input type="text" name="address" class="form-control" placeholder="Ex.: BR-158, 204 – Bairro Urlândia | Santa Maria/RS">
+                                        <strong>UF:</strong>
+                                        <input type="text" name="uf" class="form-control" placeholder="Ex.: Rio Grande do Sul">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <strong>Cidade:</strong>
+                                        <input type="text" name="city" class="form-control" placeholder="Ex.: Santa Maria">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <strong>Bairro:</strong>
+                                        <input type="text" name="district" class="form-control" placeholder="Ex.: Centro">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <strong>Nro:</strong>
+                                        <input type="number" name="nro" class="form-control" placeholder="Ex.: 1234">
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="form-group">
+                                        <strong>Logradouro:</strong>
+                                        <input type="text" name="street" class="form-control" placeholder="Ex.: BR-158">
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="form-group">
+                                        <strong>Complemento:</strong>
+                                        <input type="text" name="complement" class="form-control" placeholder="Ex.: Sala 01">
                                     </div>
                                 </div>
                             </div>

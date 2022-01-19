@@ -27,7 +27,6 @@
                                         <th>Empresa</th>
                                         <th>Email</th>
                                         <th>CNPJ</th>
-                                        <th>Endereço</th>
                                         <th colspan="3"> Ver/Editar/Excluir</th>
                                     </tr>
                                 </thead>
@@ -38,7 +37,6 @@
                                             <td>{{ $customer->company }}</td>
                                             <td>{{ $customer->email }}</td>
                                             <td>{{ $customer->cnpj }}</td>
-                                            <td>{{ $customer->address }}</td>
                                             <td align="center">
                                                 <form action="{{ route('customers.destroy', $customer->id) }}"
                                                     method="POST">
