@@ -16,17 +16,17 @@
                         @endif
 
                         <div class="row">
-                            <div class="col-sm-6">
+                            <div class="col-sm-4">
                                 <div class="card">
                                     <div class="card-body">
                                         <h5 class="card-title">Produtos</h5>
-                                        <p class="card-text">Módulo para o gerenciamento dos produtos.</p>
+                                        <p class="card-text">Módulo para o gerenciamento dos Produtos.</p>
                                         <a href="{{ route('products.index') }}" class="btn btn-primary">Listar</a>
                                         <a href="{{ route('products.create') }}" class="btn btn-primary">Cadastrar</a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-6">
+                            <div class="col-sm-4">
                                 <div class="card">
                                     <div class="card-body">
                                         <h5 class="card-title">Clientes</h5>
@@ -36,23 +36,12 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-6">
+                            <div class="col-sm-4">
                                 <div class="card">
                                     <div class="card-body">
                                         <h5 class="card-title">Pedidos</h5>
-                                        <p class="card-text">Controle dos pedidos.</p>
+                                        <p class="card-text">Módulo para o gerenciamento dos Pedidos de Venda</p>
                                         <a href="{{ route('purchases.index') }}" class="btn btn-primary">Acessar</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Usuários</h5>
-                                        <p class="card-text">Gerenciamento dos usuários</p>
-                                        <a href="#" class="btn btn-primary">Acessar</a>
                                     </div>
                                 </div>
                             </div>

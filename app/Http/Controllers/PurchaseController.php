@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use App\Models\Customer;
+use App\Models\Purchase;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -53,6 +54,14 @@ class PurchaseController extends Controller
     public function store(Request $request)
     {
         //
+        $request->validate([
+            'user_id' => 'required',
+            'product_id' => 'required',
+            'customer_id' => 'required', 
+        ]);
+
+        Purchase::create($request->all());
+        return redirect()->route('purchases.index')->with('success', 'Pedido realizado!');
     }
 
     /**

@@ -1,4 +1,4 @@
-@extends('products.layout')
+@extends('purchases.layout')
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
@@ -25,8 +25,9 @@
                                 </ul>
                             </div>
                         @endif
-                        <form action="{{ route('products.store') }}" method="POST">
+                        <form action="{{ route('purchases.store') }}" method="POST">
                             @csrf
+                            <input type="hidden" name="user_id" value="{{Auth::user()->id}}"/>
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
@@ -53,7 +54,7 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <strong>Descrição:</strong>
-                                        <textarea class="form-control" name="description"
+                                        <textarea class="form-control" name="obs"
                                             placeholder="Observações sobre o pedido."></textarea>
                                     </div>
                                 </div>
