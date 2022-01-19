@@ -26,6 +26,7 @@
                                         <th>Cód</th>
                                         <th>Produto</th>
                                         <th>Valor final</th>
+                                        <th>Cliente</th>
                                         <th colspan="3"> Ver/Editar/Excluir</th>
                                     </tr>
                                 </thead>
@@ -33,8 +34,9 @@
                                     @foreach ($purchases as $purchase)
                                         <tr>
                                             <td>{{ $purchase->id }}</td>
-                                            <td>{{ $purchase->products->title }}</td>
-                                            <td>R$ {{ number_format($purchase->amount) }}</td>
+                                            <td>{{ $purchase->products_title }}</td>
+                                            <td>R$ {{ number_format($purchase->products_price) }}</td>
+                                            <td>{{ $purchase->customers_company }}</td>
                                             <td align="center">
                                                 <form action="{{ route('purchases.destroy', $purchase->id) }}"
                                                     method="POST">

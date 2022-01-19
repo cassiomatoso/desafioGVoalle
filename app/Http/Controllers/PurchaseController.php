@@ -17,9 +17,17 @@ class PurchaseController extends Controller
     public function index()
     {
         //Retorna todos os pedidos de vendas, limitando a listagem a 5 registros
-        return view('purchases.index', [
-            'purchases' => DB::table('purchases')->paginate(5)
-        ]);
+        $purchases = DB::table('purchases')
+            ->where('user_id', auth()->id())
+            ->join('products', 'products.id', '=', 'purchases.product_id')
+            ->join('customers', 'customers.id', '=', 'purchases.customer_id')
+            ->select(
+                'products.title as products_title', 'products.price as products_price',
+                'customers.company as customers_company',
+                'purchases.*'
+            )
+            ->paginate(5);
+        return view('purchases.index', compact('purchases'));
     }
 
     /**
