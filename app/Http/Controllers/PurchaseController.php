@@ -70,20 +70,26 @@ class PurchaseController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Purchase $purchase)
     {
         //
+        return view('purchases.show', compact('purchase'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int  $purchase
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($purchase)
     {
         //
+        $purchases = Purchase::FindOrFail($purchase);
+        $products = Product::all()->sortByDesc('id');
+        $customers = Customer::all()->sortByDesc('id');
+
+        return view('purchases.edit', compact('purchases', 'products', 'customers'));
     }
 
     /**
@@ -93,19 +99,29 @@ class PurchaseController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Purchase $purchase)
     {
         //
+        $request->validate([
+            'user_id' => 'required',
+            'product_id' => 'required',
+            'customer_id' => 'required', 
+        ]);
+
+        $purchase->update($request->all());
+        return redirect()->route('purchases.index')->with('success', 'Pedido atualizado!');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  object  $purchase
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Purchase $purchase)
     {
         //
+        $purchase->delete();
+        return redirect()->route('purchases.index')->with('success', 'Pedido deletado.');
     }
 }
