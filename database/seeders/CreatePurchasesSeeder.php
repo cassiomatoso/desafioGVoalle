@@ -16,19 +16,19 @@ class CreatePurchasesSeeder extends Seeder
     {
         $purchase = [
             [
-                'amount'=>'10000',
+                'obs'=>'Não há',
                 'user_id'=>'1',
                 'product_id'=>'1',
                 'customer_id'=>'1'
             ],  
             [
-                'amount'=>'5000',
+                'obs'=>'Contrato de 3 meses para o BarraShopping',
                 'user_id'=>'1',
                 'product_id'=>'2',
                 'customer_id'=>'2'
             ],  
             [
-                'amount'=>'10000',
+                'obs'=>'Com todos os módulos',
                 'user_id'=>'1',
                 'product_id'=>'1',
                 'customer_id'=>'3'
