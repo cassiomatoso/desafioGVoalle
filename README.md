@@ -3,10 +3,10 @@
 
 ## Passos para rodar o sistema
 
-- 1 - Verificar se o diretório "Vendor" está presente no projeto;
+- 1 - Verificar se o diretório "Vendor" está presente no projeto (adicionado uma vendor.zip por precaução);
 - 2 - Abrir um terminal e rodar: "composer upgrade";
 - 3 - Verificar se o arquivo .env está com os atributos DB_DATABASE=laravel, DB_USERNAME, DB_PASSWORD preenchidos conforme as configs do seu local;
-- 4 - Criar uma base de dados chamada "laravel";
+- 4 - Criar uma base de dados MySQL chamada "laravel";
 - 5 - Executar o comando: "php artisan migrate";
 - 6 - Após rodar as migrations, executar: "php artisan db:seed --class=CreateUsersSeeder";
 - 7 - PASSOS OPCIONAIS (até o 6.3), EXECUTE CASO QUEIRA ACESSAR UM SISTEMA PREVIAMENTE POPULADO
