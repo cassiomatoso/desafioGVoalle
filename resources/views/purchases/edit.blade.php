@@ -74,6 +74,7 @@
                                             placeholder="Ex.: Sistema gerencial para empresas">{{ $purchases->obs }}</textarea>
                                     </div>
                                 </div>
+                            </div>
                                 <div class="col-md-12">
                                     <button type="submit" class="btn btn-primary">Submit</button>
                                 </div>

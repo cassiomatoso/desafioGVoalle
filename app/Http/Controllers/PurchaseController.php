@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Product;
 use App\Models\Customer;
 use App\Models\Purchase;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -67,13 +68,26 @@ class PurchaseController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Purchase $purchase)
+    public function show($id)
     {
-        //
-        return view('purchases.show', compact('purchase'));
+        //        
+        $purchases = DB::table('purchases')
+        ->select(
+            'products.title as product_title', 'products.price as product_price', 'products.description as product_description',
+            'customers.company as customer_company', 'customers.email as customer_email', 'customers.cnpj as customer_cnpj', 
+            'customers.city as customer_city', 'customers.uf as customer_uf', 'customers.district as customer_district',
+            'customers.street as customer_street', 'customers.nro as customer_nro', 'customers.complement as customer_complement',
+            'users.name as user_name', 'users.email as user_email',
+            'purchases.*'
+        )
+        ->join('products', 'products.id', '=', 'purchases.product_id')
+        ->join('customers', 'customers.id', '=', 'purchases.customer_id')
+        ->join('users', 'users.id', '=', 'purchases.user_id')
+        ->where('purchases.id', $id)
+        ->get();
+        return view('purchases.show', compact('purchases'));     
     }
 
     /**
