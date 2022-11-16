@@ -15,7 +15,6 @@
 - 7.3 - Executar: "php artisan db:seed --class=CreatePurchasesSeeder";
 - 8 - E por fim, subir a aplicação com: "php artisan serve";
 - Obs.: Usuário padrão carregado pelo Seeder: *admin@grupovoalle.com.br* | *admin@123*
-- [Repositório no GitHub](https://github.com/cassiomatoso/desafioGVoalle) - estará privado por questões CLTistas, mas caso queiram acessar, entrem em contato.
 <br/>
 <br/>
 <br/>
